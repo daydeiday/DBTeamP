@@ -1,38 +1,3 @@
-<<<<<<< Updated upstream
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-    
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>데이터베이스를 활용한 수강신청 시스템입니다.</title>
-</head>
-<body>
-
-<%@ include file="top.jsp" %>
-<jsp:useBean id="userName" class="user.UserInfo" scope="session"/>
-
-<table width="75%" align="center" height="100%">
-<% if (session_id != null){ 
-%>
-<tr>
-<td align="center"><jsp:getProperty name="userName" property="user_ID"/>님 방문을 환영합니다.</td>
-</tr>
-
-<%} else{ %>
-<tr>
-<td align="center">로그인한 후 사용하세요.</td>
-</tr>
-<%
-}
-%>
-
-</table>
-
-</body>
-=======
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR" import="java.sql.*"%>
 <%@ include file="top.jsp" %>
@@ -53,13 +18,13 @@
 		rel="stylesheet">
 	<script src="https://kit.fontawesome.com/98e3c5fbec.js"
 		crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="\enroll\main.css">
+	<link rel="stylesheet" href="main.css">
 </head>
 <body>
 	<nav class="navbar">
 		<span class="navbar_toggle"><i class="fa-solid fa-bars"></i></span>
 		<div class="navbar_logo">
-			<a onClick="window.location.reload()" style="cursor: pointer;">숙제여자대학교</a>
+			<a onClick="window.location.reload()" style="cursor: pointer;">숙명여자대학교</a>
 		</div>
 		<div class="navbar_session">
 			<jsp:useBean id="userName" class="user.UserInfo" scope="session"/>
@@ -75,12 +40,11 @@
 		<aside class="asidebar">
 			<ul class="aside_menu">
 				<li></li>
-				<li><a href="#">수강신청 입력</a></li>
-				<li><a href="#">수강신청 삭제</a></li>
-				<li><a href="#">신청내역 조회</a></li>
-				<li><a href="#">개인시간표</a></li>
-				<li><a href="#">강의 검색</a></li>
-				<li><a href="#">강의 평가</a></li>
+				<li><a href="insert.jsp">수강신청 입력</a></li>
+				<li><a href="select.jsp">수강신청 확인</a></li>
+				<li><a href="timetable.jsp">개인시간표</a></li>
+				<li><a href="evaluate.jsp">수업 검색</a></li>
+				<li><a href="condition.jsp">수업 평가</a></li>
 			</ul>
 			<ul class="aside_session">
 				<li><%=log%></li>
@@ -93,5 +57,4 @@
 		</section>
 	</main>
 </body>
->>>>>>> Stashed changes
 </html>
