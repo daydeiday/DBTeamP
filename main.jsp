@@ -17,7 +17,7 @@
 <% if (session_id != null){ 
 %>
 <tr>
-<td align="center"><jsp:getProperty name="userName" property="user_ID"/>님 방문을 환영합니다.</td>
+<td align="center"><%=session_id %>님 방문을 환영합니다.</td>
 </tr>
 
 <%} else{ %>

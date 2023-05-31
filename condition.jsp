@@ -19,10 +19,10 @@
 	</script>
 	<% } %>
 	<form action="condition.jsp" method="post">
-		<label for="year">년도:</label> <input type="text" id="year" name="year"><br>
+		<label for="year">년도:</label> <input type="number" id="year" name="year" min="2020" max="2023" value="2023"><br>
 
-		<label for="semester">학기:</label> <input type="text" id="semester"
-			name="semester"><br> <label for="major">전공:</label> <input
+		<label for="semester">학기:</label> <input type="number" id="semester"
+			name="semester" min=1 max=2 value="1"><br> <label for="major">전공:</label> <input
 			type="text" id="major" name="major"><br> <input
 			type="submit" value="조회">
 	</form>

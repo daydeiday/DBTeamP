@@ -32,7 +32,7 @@ System.out.println(e);
 %>
 <%
 stmt = conn.createStatement();
-String sql = "select s_id from student where s_id='" +userID + "' and s_pw='" + userPassword + "'";
+String sql = "select s_id from student where s_id='" +userID + "' and s_pwd='" + userPassword + "'";
 ResultSet myResultSet = stmt.executeQuery(sql);
 if(myResultSet.next()){
 	session.setAttribute("user", userID);
